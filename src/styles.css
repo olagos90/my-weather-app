@@ -1,0 +1,40 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: white;
+  background-size: cover;
+  margin: auto;
+  padding-top: 100px;
+  max-width: 1000px;
+  white-space: nowrap;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: auto;
+}
+.img-fluid {
+  display: block;
+  max-width: auto;
+}
+.img-thumbnail {
+  border: 0;
+  margin: auto;
+}
+
+li {
+  list-style: none;
+  line-height: 2;
+}
+.weather-app {
+  padding: 40px;
+  border: 1px solid;
+  border-color: rgb(233, 233, 233);
+  border-radius: 6px;
+}
+.units {
+  vertical-align: top;
+  margin: auto;
+  display: inline-block;
+  padding-top: 6px;
+}
