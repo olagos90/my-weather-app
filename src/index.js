@@ -1,7 +1,3 @@
-//search bar
-
-/// date and time
-
 let currentDate = new Date();
 
 let dayIndex = currentDate.getDay();
@@ -57,15 +53,13 @@ if (minutes < 10) {
 let timeElement = document.querySelector("#time");
 timeElement.innerHTML = `${hours}:${minutes}`;
 
-//I need to be able to convert temperature, I will try that later
+//function searchLocation(position) {
+//event.preventDefault();
+//let apiKey = "958430453b8437bcf00c5c9e9914dcae";
+//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
-function searchLocation(position) {
-  event.preventDefault();
-  let apiKey = "958430453b8437bcf00c5c9e9914dcae";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(displayWeatherConditions);
-}
+//axios.get(apiUrl).then(displayWeatherConditions);
+//}
 
 function displayWeatherConditions(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -112,9 +106,11 @@ function displayFahrenheitTemperature(event) {
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
+
+  let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
+
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 let celsiusTemperature = null;
