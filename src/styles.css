@@ -11,10 +11,11 @@ body {
 img {
   display: block;
   margin: auto;
-  width: auto;
+  width: 100px;
 }
-.img-fluid {
+.icon {
   display: block;
+  min-width: 250px;
   max-width: auto;
 }
 .img-thumbnail {
