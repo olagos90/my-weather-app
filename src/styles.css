@@ -21,6 +21,7 @@ img {
 .img-thumbnail {
   border: 0;
   margin: auto;
+  min-width: fit-content;
 }
 
 li {
