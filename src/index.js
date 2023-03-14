@@ -61,6 +61,17 @@ timeElement.innerHTML = `${hours}:${minutes}`;
 //axios.get(apiUrl).then(displayWeatherConditions);
 //}
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `<div class="row">
+    <div class="col-2" >
+         <h5>Fri</h5>
+         <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" class="img-thumbnail"/>
+            <div class="weather-forecast-temperatures">
+              <span class="weather-forecast-temperatures-max">22°C </span><span class="weather-forecast-temperatures-min">17°C</span></div>
+    </div>`;
+}
+
 function displayWeatherConditions(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -125,3 +136,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
+displayForecast();
