@@ -55,3 +55,20 @@ li {
 .weather-forecast-temperatures-min {
   opacity: 0.5;
 }
+.weather-conditions {
+  text-align: center;
+  color: black;
+  margin-right: 20px;
+}
+
+.current-time-date {
+  text-align: center;
+  color: black;
+  margin-right: 20px;
+}
+
+.city {
+  max-inline-size: 30px;
+  color: black;
+  opacity: 0.9;
+}

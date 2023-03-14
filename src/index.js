@@ -63,13 +63,26 @@ timeElement.innerHTML = `${hours}:${minutes}`;
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = `<div class="row">
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
     <div class="col-2" >
-         <h5>Fri</h5>
+         <h5>${day}</h5>
          <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" class="img-thumbnail"/>
             <div class="weather-forecast-temperatures">
-              <span class="weather-forecast-temperatures-max">22°C </span><span class="weather-forecast-temperatures-min">17°C</span></div>
-    </div>`;
+              <span class="weather-forecast-temperatures-max">22°C </span>
+              <span class="weather-forecast-temperatures-min">17°C</span>
+              </div>
+    </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayWeatherConditions(response) {
