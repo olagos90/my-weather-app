@@ -44,3 +44,14 @@ li {
 .forecast-container {
   margin-top: 50px;
 }
+
+.weather-forecast {
+  text-align: center;
+}
+
+.weather-forecast-temperatures {
+  font-size: 14px;
+}
+.weather-forecast-temperatures-min {
+  opacity: 0.5;
+}
